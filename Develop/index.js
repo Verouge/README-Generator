@@ -29,7 +29,7 @@ const questions = [
     type: "list",
     name: "license",
     message: "Choose a license for your project:",
-    choices: ["MIT", "GPLv2", "Apache 2.0", "GPLv3", "None"],
+    choices: ["MIT", "GPLv3", "Apache 2.0", "BSD 3-clause", "None"],
   },
   {
     type: "input",
@@ -69,7 +69,6 @@ function init() {
             name: "repositorySSH",
             message: "Enter the repository SSH link:",
           },
-          // Add more questions specific to Node.js App if needed
         ])
         .then((nodeAppData) => {
           // Merge the answers from the main set of questions and the Node.js App questions
