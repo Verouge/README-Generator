@@ -142,7 +142,7 @@ ${data.description}
 
 To clone the repository, navigate to the directory you want to clone the repository into.
 
-Then, run the following command, replacing '<SSH>' with the repository SSH link.
+Then, run the following command.
 
 \`\`\`bash
 git clone '${data.repositorySSH}'
