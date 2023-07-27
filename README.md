@@ -1,6 +1,8 @@
 # README Generator
 
 [![License: Unlicense](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![NPM-Package: Inquirer@8.2.4](https://img.shields.io/badge/NPM_Package-Inquirer@8.2.4-lightgreen.svg)](https://www.npmjs.com/package/inquirer)
+[![NPM-Package: Path@0.12.7](https://img.shields.io/badge/NPM_Package-Path@0.12.7-red.svg)](https://www.npmjs.com/package/path)
 
 ## Description
 
