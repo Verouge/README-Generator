@@ -19,7 +19,42 @@ const questions = [
     message: "Is this project a website or a Node.js app?",
     choices: ["Website", "Node.js App"],
   },
-  // Add more questions for installation, usage, contribution, tests, license, GitHub username, email, etc.
+  {
+    type: "input",
+    name: "usage",
+    message: "Enter usage instructions for your project:",
+  },
+  {
+    type: "list",
+    name: "license",
+    message: "Choose a license for your project:",
+    choices: ["MIT", "GPLv2", "Apache 2.0", "GPLv3", "None"],
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: "Enter contribution guidelines for your project:",
+  },
+  {
+    type: "input",
+    name: "credits",
+    message: "Enter credits for your project:",
+  },
+  {
+    type: "input",
+    name: "acknowledgements",
+    message: "Enter acknowledgements for your project:",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "Enter your email address:",
+  },
+  {
+    type: "input",
+    name: "github",
+    message: "Enter your GitHub username:",
+  },
 ];
 
 function init() {
