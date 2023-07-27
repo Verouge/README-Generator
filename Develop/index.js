@@ -1,3 +1,4 @@
+const path = require("path");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
@@ -89,7 +90,8 @@ function generateReadme(data) {
   const markdownContent = generateMarkdown(data);
 
   // Write the markdown content to README.md
-  fs.writeFile("README.md", markdownContent, (err) => {
+  const outputPath = path.join("output", "README.md");
+  fs.writeFile(outputPath, markdownContent, (err) => {
     if (err) {
       console.error(err);
     } else {
