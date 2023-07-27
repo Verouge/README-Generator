@@ -1,10 +1,36 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  switch (license) {
+    case "MIT":
+      return "https://img.shields.io/badge/License-MIT-yellow.svg";
+    case "GPLv2":
+      return "https://img.shields.io/badge/License-GPL%20v2-blue.svg";
+    case "Apache 2.0":
+      return "https://img.shields.io/badge/License-Apache%202.0-blue.svg";
+    case "GPLv3":
+      return "https://img.shields.io/badge/License-GPLv3-blue.svg";
+    default:
+      return "https://img.shields.io/badge/license-None-blue"; // Empty string for "None" or unknown license
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  switch (license) {
+    case "MIT":
+      return "https://opensource.org/licenses/MIT";
+    case "GPLv2":
+      return "https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html";
+    case "Apache 2.0":
+      return "https://www.apache.org/licenses/LICENSE-2.0";
+    case "GPLv3":
+      return "https://www.gnu.org/licenses/gpl-3.0.en.html";
+    default:
+      return "";
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -14,7 +40,9 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   let markdown = `# ${data.title}
 
-![License](https://img.shields.io/github/license/${data.username}/${data.title})
+![License](${renderLicenseBadge(data.license)})](${renderLicenseLink(
+    data.license
+  )})
 
 ## Description
 ${data.description}
@@ -86,7 +114,7 @@ If you have any questions, please feel free to contact me via email or on GitHub
 
 Email: ${data.email}
 
-GitHub: [${data.username}](https://github.com/${data.username})
+GitHub: [${data.github}](https://github.com/${data.github})
 `;
 
   return markdown;
