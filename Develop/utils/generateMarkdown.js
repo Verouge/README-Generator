@@ -40,9 +40,9 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   let markdown = `# ${data.title}
 
-![License](${renderLicenseBadge(data.license)})](${renderLicenseLink(
+[![License: Unlicense](${renderLicenseBadge(
     data.license
-  )})
+  )})](${renderLicenseLink(data.license)})
 
 ## Description
 ${data.description}
